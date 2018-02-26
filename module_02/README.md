@@ -8,6 +8,12 @@ A version control system (or VCS) provides an automatic way to track changes in 
 
 Originally developed by Linux creator Linus Torvalds3 to host the Linux kernel, Git is a command-line program that is designed in the Unix tradition (which is why a familiarity with the Unix command line is an important prerequisite). Git has a combination of power, speed, and community adoption that leave it few rivals, but it can be tricky to learn, and other Git tutorials have a tendency to introduce lots of heavy theory, which can be interesting to learn but in practice is really only understood by a tiny handful of Git users.
 
+### Git cheat sheet
+
+Use this handy git cheat sheet guide to enhance your workflow. This Git cheat sheet saves you time when you just can't remember what a command is or don't want to use git help in the command line. It is hard to memorize all the important Git commands by heart, so print this out or save it to your desktop to resort to when you get stuck. We’ve included the basic Git commands to help you learn Git, and more advanced concepts around Git branches, remote repositories, undoing changes, and more. 
+
+[Download](https://www.atlassian.com/dam/jcr:8132028b-024f-4b6b-953e-e68fcce0c5fa/atlassian-git-cheatsheet.pdf)
+
 ## What is GitHub?
 GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
