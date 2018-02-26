@@ -5,7 +5,7 @@ In this track, you’ll learn how to build beautiful, interactive websites by le
 
 ## What you'll learn
 - What web frontend development is all about
-- The different languages that are used in this development arena
+- The different languages used in this area of development
 - Learn about the frameworks in use today and how they apply to web development
 - Try out some of the tools available for web developers
 
