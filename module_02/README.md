@@ -14,6 +14,22 @@ Use this handy git cheat sheet guide to enhance your workflow. This Git cheat sh
 
 [Download](https://www.atlassian.com/dam/jcr:8132028b-024f-4b6b-953e-e68fcce0c5fa/atlassian-git-cheatsheet.pdf)
 
+#### Learn more
+
+We recommend these interactive tutorials that go through many of the day-to-day operations with Git and other not so well-known ones.
+
+- https://try.github.io/levels/1/challenges/1
+- https://katacoda.com/courses/git
+- http://pcottle.github.io/learnGitBranching/
+
+On the other hand, we also recommend the refcard offered by DZone.com on Git
+
+http://refcardz.dzone.com/refcardz/getting-started-git
+
+And to deepen more about the workflow of a team working in Git (very useful for the mandatory)
+
+https://www.atlassian.com/es/git/workflows#!workflow-feature-branch
+
 ## What is GitHub?
 GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
