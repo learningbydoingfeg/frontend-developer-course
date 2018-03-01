@@ -1,0 +1,72 @@
+/*.contenedor{
+  display:flex;
+}
+
+.contenedor{
+  display:flex;
+  flex-direction:row-reverse;
+}
+
+
+.contenedor{
+  display:flex;
+  flex-direction:column;
+}
+
+.contenedor{
+  display:flex;
+  flex-direction:column-reverse;
+}
+
+.contenedor{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.contenedor{
+    display:flex;
+    flex-wrap:wrap-reverse;
+}
+
+.contenedor{
+    display:flex;
+    flex-direction:row-reverse;
+    flex-wrap:wrap-reverse;
+}
+
+.contenedor{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+.elemento{
+  flex-basis:25%;
+}
+
+/**  Apriencia  **/
+.elemento {
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0px;
+}
+
+.elemento:nth-child(1){ background-color:#122838; }
+.elemento:nth-child(2){ background-color:#183449; }
+.elemento:nth-child(3){ background-color:#204662; }
+.elemento:nth-child(4){ background-color:#2a5b7f; }
+.elemento:nth-child(5){ background-color:#34719e; }
+.elemento:nth-child(6){ background-color:#3e86bb; }
+.elemento:nth-child(7){ background-color:#4698d4; }
