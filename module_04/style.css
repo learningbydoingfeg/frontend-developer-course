@@ -41,11 +41,20 @@
   justify-content:flex-start;
 }
 
+.
+
 */
+.contenedor{
+  display:flex;
+  flex-wrap:wrap;
+}
 
 
-
-
+.animate {
+  background: red;
+  height: 100px;
+  width: 100px;
+}
 
 
 
