@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Mi primer post",
+    "contet": "Lorem impsum Lorem impsum Lorem impsum ........",
+    "image": "http://via.placeholder.com/1280x550",
+    "author": {
+      "name":"",
+      "about": ""
+    }
+  },
+  {
+    "title": "Mi segundo post",
+    "contet": "Lorem impsum Lorem impsum Lorem impsum ........",
+    "image": "http://via.placeholder.com/1280x550"
+  },
+  {
+    "title": "Mi tercero post",
+    "contet": "Lorem impsum Lorem impsum Lorem impsum ........",
+    "image": "http://via.placeholder.com/1280x550"
+  }
+]
