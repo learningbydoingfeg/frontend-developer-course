@@ -67,19 +67,6 @@ class Post extends Component {
           </h2>
 
           <p>{content}</p>
-
-          {
-            author && author.name && (
-              <div>
-                Author: {author.name}
-              </div>
-            ) || (
-              <div>
-                Author: UNNAMED
-              </div>
-            )
-          }
-
           {
             author && author.name
             ? (

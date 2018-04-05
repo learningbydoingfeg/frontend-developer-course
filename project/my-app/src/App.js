@@ -11,9 +11,7 @@ class App extends Component {
   constructor () {
     super()
 
-    this.state = {
-      Data
-    }
+    this.state = { }
   }
 
   componentWillMount () {
@@ -23,7 +21,12 @@ class App extends Component {
   componentDidMount () {
     // 1. Manipular DOM
     // 2. Realizar peticiones HTTP
-    console.log('componentDidMount')
+
+    // Simulando los datos del servidor
+    setTimeout(() => {
+      this.setState({ Data })
+      console.log('componentDidMount')
+    }, 3000);
   }
 
   myHeader () {
@@ -36,25 +39,23 @@ class App extends Component {
   }
 
   render() {
+    const { Data } = this.state
     return (
       <div className="App" style={{marginBottom: '50px'}}>
         {this.myHeader()}
-        <Post
-          title='Hola mundo'
-          content='Este es mi primer ejercicio de react'
-          image={Data[0].image}
-          prueba={this.state.a}
-        />
         <button onClick={() => {this.setState({ a: 1 })} } > Update </button>
         {
-          /*this.state.Data.map((post, index) => (
+          Data && Data.map((post, index) => (
             <Post
               key={index}
               title={post.title}
               content={post.contet}
               image={post.image}
+              author={post.author}
             />
-          ))*/
+          )) || (
+            <img src='loading.gif' />
+          )
         }
       </div>
     );
