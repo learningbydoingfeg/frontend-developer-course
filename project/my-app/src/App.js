@@ -15,6 +15,17 @@ class App extends Component {
       Data
     }
   }
+
+  componentWillMount () {
+    console.log('componentWillMount')
+  }
+
+  componentDidMount () {
+    // 1. Manipular DOM
+    // 2. Realizar peticiones HTTP
+    console.log('componentDidMount')
+  }
+
   myHeader () {
     return (
       <header className="App-header">
@@ -25,23 +36,25 @@ class App extends Component {
   }
 
   render() {
-    console.log(Data[0].title)
     return (
-      <div className="App">
+      <div className="App" style={{marginBottom: '50px'}}>
         {this.myHeader()}
         <Post
           title='Hola mundo'
           content='Este es mi primer ejercicio de react'
+          image={Data[0].image}
+          prueba={this.state.a}
         />
+        <button onClick={() => {this.setState({ a: 1 })} } > Update </button>
         {
-          this.state.Data.map((post, index) => (
+          /*this.state.Data.map((post, index) => (
             <Post
               key={index}
               title={post.title}
               content={post.contet}
               image={post.image}
             />
-          ))
+          ))*/
         }
       </div>
     );

@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import Author from './../Author/Author'
 
@@ -7,21 +8,46 @@ import './Post.css'
 class Post extends Component {
   constructor (props) {
     super(props)
+
+    this.state = {}
+  }
+
+  componentWillReceiveProps (nextProps) {
+    const props = this.props
+    this.state.myProps = nextProps
+  }
+
+  shouldComponentUpdate(nextProps) {
+    const props = this.props
+    //debugger
+    if (props.prueba !== nextProps.prueba) {
+      return true
+    }
+    return false
+  }
+
+  componentWillUpdate() {
+
+  }
+
+  componentDidUpdate () {
+    const $a = document.getElementById('prueba')
+    console.log('prueba', $a)
   }
 
   render () {
-    const { title, content, image } = this.props
+    console.log('Props')
+    const { title, content, image, author } = this.props
 
     return (
       <article className="post post-large blog-single-post">
-        <div className="post-image">
+        <div id='prueba' className="post-image">
           <div className="owl-carousel owl-theme" data-plugin-options='{"items":1}'>
             <div>
               <div className="img-thumbnail">
                 {
                   image && <img className="img-responsive" src={image} alt="Img" />
                 }
-
               </div>
             </div>
           </div>
@@ -41,16 +67,44 @@ class Post extends Component {
           </h2>
 
           <p>{content}</p>
+
+          {
+            author && author.name && (
+              <div>
+                Author: {author.name}
+              </div>
+            ) || (
+              <div>
+                Author: UNNAMED
+              </div>
+            )
+          }
+
+          {
+            author && author.name
+            ? (
+              <div>
+                Author: {author.name}
+              </div>
+            )
+            : (
+              <div>
+                Author: UNNAMED
+              </div>
+            )
+          }
+
         </div>
       </article>
     )
   }
 }
 
-Post.prototype = {
-  title: PropTypes.string,
+Post.propTypes = {
+  title: PropTypes.string.isRequired,
   content: PropTypes.string,
-  show: PropTypes.bool
+  image: PropTypes.string,
+  author: PropTypes.object
 }
 
 export default Post
