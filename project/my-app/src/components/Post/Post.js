@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import Date from './../Date/Date'
 import Author from './../Author/Author'
 
 import './Post.css'
@@ -14,7 +15,7 @@ class Post extends Component {
 
   componentWillReceiveProps (nextProps) {
     const props = this.props
-    this.state.myProps = nextProps
+    this.setState({myProps: nextProps})
   }
 
   shouldComponentUpdate(nextProps) {
@@ -26,17 +27,7 @@ class Post extends Component {
     return false
   }
 
-  componentWillUpdate() {
-
-  }
-
-  componentDidUpdate () {
-    const $a = document.getElementById('prueba')
-    console.log('prueba', $a)
-  }
-
   render () {
-    console.log('Props')
     const { title, content, image, author } = this.props
 
     return (
@@ -53,10 +44,7 @@ class Post extends Component {
           </div>
         </div>
 
-        <div className="post-date">
-          <span className="day">10</span>
-          <span className="month">Jan</span>
-        </div>
+        <Date day='10' month='Jan' />
 
         <div className="post-content">
 
@@ -67,19 +55,8 @@ class Post extends Component {
           </h2>
 
           <p>{content}</p>
-          {
-            author && author.name
-            ? (
-              <div>
-                Author: {author.name}
-              </div>
-            )
-            : (
-              <div>
-                Author: UNNAMED
-              </div>
-            )
-          }
+          <Author name={author.name} about={author.about}/>
+
 
         </div>
       </article>

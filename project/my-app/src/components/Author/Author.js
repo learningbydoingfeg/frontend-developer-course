@@ -1,6 +1,10 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
-class Author extends Component {
+class Author extends PureComponent {
+  constructor (props) {
+    super(props)
+  }
+
   render () {
     return (
       <div className="post-block post-author clearfix">
@@ -14,12 +18,10 @@ class Author extends Component {
         </div>
         <p>
           <strong className="name">
-            <a href="#">John Doe</a>
+            <a href="#">{this.props.name}</a>
           </strong>
         </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque
-          urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies,
-          justo eu convallis placerat, felis enim ornare nisi, vitae mattis nulla ante id dui. </p>
+        <p>{this.props.about}</p>
       </div>
     )
   }
