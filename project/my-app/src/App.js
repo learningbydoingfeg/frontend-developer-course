@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Header from './components/Header/Header'
 import Post from './components/Post/Post'
+import {Play, Pause} from './components/Icons/Figure'
 
 import Data from './assets/data/post.json'
 
@@ -42,6 +43,8 @@ class App extends Component {
     return (
       <div className="App" style={{marginBottom: '50px'}}>
         <Header logo={logo} />
+        <Play size={32} color='red' />
+        <Pause size={32} color='blue' />
         <button
           className='btn btn-primary'
           onClick={() => {this.setState({ a: 1 })} }
